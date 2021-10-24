@@ -1,3 +1,7 @@
+# author: Dimitriy i0x <annihilation.ga>
+# feel free to modify or copy this code 
+# but also specify credits (link to this repo or file)
+
 def __e(obj,n,v):obj[n]=v
 def __raise(e):raise e
 ___e,__,___,__c,__p,__if,___join=(lambda obj,n,v:setattr(obj,n,v)),(lambda ret,*argc:ret),(lambda *argc:0),(lambda obj,n:___e(globals(),obj,{**obj,n:""})),(lambda obj:print(obj)),(lambda*__:__[0]if __[1]else __[2]),(lambda a:[a[0],a[1]])
