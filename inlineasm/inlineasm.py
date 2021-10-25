@@ -11,7 +11,6 @@ __af=type("__af",(object,),{"__init__":(lambda self,code,ret_type,*arg_types:___
 __asm=type("__asm",(),{"__init__":lambda self,ret_t:___e(self,"ret_type",ret_t),"__lt__":(lambda self,asm:__af("\n".join(asm),getattr(self,"ret_type")))})
 
 
-
 __import <<"os"
 __import <<"tempfile"
 __import <<"subprocess"
