@@ -22,14 +22,14 @@ __c <("""
 
 class MyClass {
 public:
-  MyClass(std::string negr) {
-    std::cout << negr << " ultra nigger" <<  std::endl;
+  MyClass(std::string hello) {
+    std::cout << hello << " World!" <<  std::endl;
   }
 };
 
 int main() {
-  std::string negr = "kot";
-  MyClass cls(negr);
+  std::string hello = "Hello";
+  MyClass cls(hello);
   
   return 0;
 }
