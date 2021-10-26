@@ -9,29 +9,13 @@ __import=type("__import",(),{"__init__":lambda self:None,"__lshift__":lambda sel
 __include=type("__include",(),{"__init__":lambda self:None,"__lt__":lambda self,file:exec(open(file,"r").read())})()
 
 __af=type("__af",(object,),{"__init__":(lambda self,asm:__(None,___(___(___e(self,"tfile",___join(tempfile.mkstemp(".S","temp",os.getcwd()))),___e(self,"source",getattr(self,"tfile")[1]),___e(self,"f",open(getattr(self,"source"),"wb")),),___(getattr(self,"f").write(asm.encode("utf-8")),getattr(self,"f").close(),),___(___e(self,"sts",subprocess.check_output(f"nasm {getattr(self,'source')}",shell=True)),__if(print(subprocess.check_output(getattr(self,"source")[:-2]).decode("utf-8")),getattr(self,"sts")==0,print(getattr(self,"sts"))),),os.unlink(getattr(self,"source")))))})
-__asm=type("__asm",(),{"__init__":lambda self:None,"__lt__":(lambda self,asm:__af("\n".join(asm)))})()
+__asm=type("__asm",(),{"__init__":lambda self:None,"__lt__":(lambda self,asm:__af(asm if type(asm)is str else'\n'.join(asm)))})()
 
 
 __import <<"os"
 __import <<"tempfile"
 __import <<"subprocess"
 
-__asm <( """
-global start
-section .text
+__asm <("""
 
-start:
- mov rax, 0x2000004
- mov rdi, 1
- mov rsi, msg
- mov rdx, msg.len
- syscall
- mov rax, 0x2000001
- mov rdi, 0
- syscall
-
-section .data
-
-msg: db "Hello, world!", 10
-.len: equ $ - msg
 """)
